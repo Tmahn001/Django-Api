@@ -180,5 +180,5 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))] # new
-STATIC_ROOT = [str(BASE_DIR.joinpath('staticfiles'))] # new
+STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) # new
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
