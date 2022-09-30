@@ -17,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 from datetime import timedelta
 
 from environs import Env
-
+import os
 env = Env()
 env.read_env()
 
@@ -178,7 +178,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))] # new
-STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles')) # new
+STATIC_ROOT = [str(BASE_DIR.joinpath('staticfiles'))] # new
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
